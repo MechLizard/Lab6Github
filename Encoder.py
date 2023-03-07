@@ -16,7 +16,11 @@ def encode():
 
 
 def decode():
-    pass
+    temp = ""
+    for num in encoded_password:
+        temp += str((int(num) + 7) % 10)
+    print(f"The encoded password is {encoded_password}, and the original password is {temp}")
+    return temp
 
 
 if __name__ == '__main__':
@@ -34,6 +38,6 @@ if __name__ == '__main__':
         if selection == 1:
             encoded_password = encode()
         elif selection == 2:
-            decode(encoded_password)
+            decode()
         elif selection == 3:
             break
