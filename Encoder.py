@@ -19,20 +19,21 @@ def decode():
     pass
 
 
-while True:
+if __name__ == '__main__':
+    while True:
 
-    # Print menu
-    print("Menu")
-    print("-------------")
-    print("1. Encode")
-    print("2. Decode")
-    print("3. Quit\n")
+        # Print menu
+        print("Menu")
+        print("-------------")
+        print("1. Encode")
+        print("2. Decode")
+        print("3. Quit\n")
 
-    selection = int(input("Please enter an option: "))
+        selection = int(input("Please enter an option: "))
 
-    if selection == 1:
-        encoded_password = encode()
-    elif selection == 2:
-        decode(encoded_password)
-    elif selection == 3:
-        break
+        if selection == 1:
+            encoded_password = encode()
+        elif selection == 2:
+            decode(encoded_password)
+        elif selection == 3:
+            break
